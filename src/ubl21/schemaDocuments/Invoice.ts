@@ -304,7 +304,7 @@ export default class Invoice {
    * @returns {Invoice}
    */
   setCopyIndicator(value: boolean): Invoice {
-    this.validateInstanceOf(value, ['boolean']);
+    this.validateInstanceOf(value, ['boolean' , 'string']);
 
     this.children.copyIndicator = new UdtIndicator(value);
     return this;

@@ -8,6 +8,7 @@ import {
   UdtName,
   UdtQuantity,
   UdtIndicator,
+  UdtAmount,
 } from '../types/UnqualifiedDataTypes/';
 
 /* TODO GANERIC CLASSES */
@@ -40,6 +41,9 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
     classRef: UdtCode,
   },
   AllowanceChargeReason: { order: 4, attributeName: 'cbc:AllowanceChargeReason', min: 1, max: 1, classRef: UdtText },
+  MultiplierFactorNumeric : { order: 5, attributeName: 'cbc:MultiplierFactorNumeric', min: 0, max:1, classRef: UdtText },
+  Amount : { order: 8, attributeName: 'cbc:Amount', min: 1, max:1, classRef: UdtAmount },
+  BaseAmount : { order: 9, attributeName: 'cbc:BaseAmount', min: 0, max:1, classRef: UdtAmount },
 };
 
 type AllowedParams = {
@@ -51,6 +55,9 @@ type AllowedParams = {
   AllowanceChargeReasonCode: string | UdtCode;
   /** The reason for this allowance or charge */
   AllowanceChargeReason: string | UdtText;
+  MultiplierFactorNumeric : string | UdtText;
+  Amount: UdtAmount;
+  BaseAmount: UdtAmount;
 };
 
 /**

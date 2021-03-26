@@ -76,7 +76,7 @@ type AllowedParams = {
  *
  */
 class Price extends GenericAggregateComponent {
-  constructor(content: AllowanceCharge) {
+  constructor(content: AllowedParams) {
     super(content, ParamsMap, 'cac:Price');
   }
 
